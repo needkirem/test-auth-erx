@@ -19,17 +19,32 @@
         }
 
     </style>
-<meta name="referrer" content="origin"></head>
+<meta name="referrer" content="origin">
+
+    <script>
+         function redirectUrl() {
+           const urlParams = new URLSearchParams(window.location.search);
+           const myParam = urlParams.get('redirectUrl');
+           if (myParam != null) {
+                var link = myParam + '?temporaryUserId=b3ec53e1-c7d1-4829-ba2d-ce01f00e4a26'
+                document.getElementById('authLink').setAttribute("href", link);
+           }
+         }
+    </script>
+
+</head>
 
 
 
-<body style="" onload="checkParams()">
+<body style="" onload="redirectUrl()">
 
 <section>
 
-    <a href="https://needkirem.github.io/test-auth-erx/h.html?temporaryUserId=b3ec53e1-c7d1-4829-ba2d-ce01f00e4a26">Авторизация ГосУслуги</a>
+    <a id="authLink" href="https://needkirem.github.io/test-auth-erx/h.html?temporaryUserId=b3ec53e1-c7d1-4829-ba2d-ce01f00e4a26">Авторизация ГосУслуги</a>
 
 </section>
 
 
-</body></html>
+</body>
+
+</html>
